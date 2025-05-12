@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://cves33i348shw"]
+
+[ext_resource type="Script" uid="uid://cdo07ga3o8o4n" path="res://scripts/item.gd" id="1_xplq3"]
+[ext_resource type="Texture2D" uid="uid://t3xo6jkt0nev" path="res://assets/dente.png" id="2_7tjqb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0e1ir"]
+albedo_color = Color(1, 0.803922, 0, 1)
+metallic = 1.0
+roughness = 0.54
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f01au"]
+albedo_color = Color(1, 0.792157, 0, 1)
+metallic = 0.15
+roughness = 0.4
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i264o"]
+material = SubResource("StandardMaterial3D_f01au")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.02
+
+[resource]
+script = ExtResource("1_xplq3")
+item_name = "Dente"
+size = 0
+description = ""
+mesh = SubResource("CylinderMesh_i264o")
+material = SubResource("StandardMaterial3D_0e1ir")
+texture = ExtResource("2_7tjqb")
+sellPrice = 0
+metadata/_custom_type_script = "uid://cdo07ga3o8o4n"

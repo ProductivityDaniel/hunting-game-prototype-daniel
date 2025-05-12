@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bthou12iaid5n"]
+
+[ext_resource type="Script" uid="uid://c8vee2ggs4ok2" path="res://world_item.gd" id="1_8r7n1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k7chi"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eoy2r"]
+
+[node name="WorldItem" type="Area3D"]
+script = ExtResource("1_8r7n1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_k7chi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_eoy2r")
+
+[node name="Label" type="Label3D" parent="."]

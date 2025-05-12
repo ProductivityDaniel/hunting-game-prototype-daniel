@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c66j4gxc8nrs8"]
+
+[ext_resource type="Script" uid="uid://bc27xubs1rpmx" path="res://scripts/equipped_item.gd" id="1_o6ins"]
+
+[node name="EquippedItem" type="MeshInstance3D"]
+script = ExtResource("1_o6ins")

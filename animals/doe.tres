@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Animal" load_steps=6 format=3 uid="uid://hdojov3h0wo2"]
+
+[ext_resource type="Script" uid="uid://2y5kqcr44u5h" path="res://scripts/animal.gd" id="1_5bh5b"]
+[ext_resource type="Resource" uid="uid://csseksj1681ul" path="res://items/venison.tres" id="1_bsvv2"]
+[ext_resource type="Script" uid="uid://lacdo80ytwpy" path="res://scripts/animalScripts/doe.gd" id="1_mkgnm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkgnm"]
+albedo_color = Color(0.521582, 0.371964, 0.167833, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5khsk"]
+size = Vector3(0.5, 0.6, 1.7)
+
+[resource]
+script = ExtResource("1_5bh5b")
+animal_name = "Doe"
+description = ""
+mesh = SubResource("BoxMesh_5khsk")
+material = SubResource("StandardMaterial3D_mkgnm")
+harvest = ExtResource("1_bsvv2")
+behaviour = ExtResource("1_mkgnm")
+health = 0
+metadata/_custom_type_script = "uid://2y5kqcr44u5h"

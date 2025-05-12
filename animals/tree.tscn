@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://eiatuh6srmgl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vat8n"]
+size = Vector3(1, 7, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qckr"]
+albedo_color = Color(0.450393, 0.253055, 0.133778, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ph7bx"]
+size = Vector3(1, 7, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufhtl"]
+albedo_color = Color(0.200123, 0.360132, 0.183617, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3xyg5"]
+material = SubResource("StandardMaterial3D_ufhtl")
+size = Vector3(4, 4, 4)
+
+[node name="Tree" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_vat8n")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qckr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ph7bx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.29026, 0)
+mesh = SubResource("BoxMesh_3xyg5")

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://csseksj1681ul"]
+
+[ext_resource type="Script" uid="uid://cdo07ga3o8o4n" path="res://scripts/item.gd" id="1_s0qlg"]
+[ext_resource type="Texture2D" uid="uid://drg8iasnaqbgm" path="res://assets/venison.webp" id="2_a2cbu"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_s0qlg"]
+albedo_color = Color(0.435096, 0.227496, 0.101019, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a2cbu"]
+size = Vector3(1, 0.3, 0.5)
+
+[resource]
+script = ExtResource("1_s0qlg")
+item_name = "Venison"
+size = 4
+description = ""
+mesh = SubResource("BoxMesh_a2cbu")
+material = SubResource("ORMMaterial3D_s0qlg")
+texture = ExtResource("2_a2cbu")
+sellPrice = 5
+metadata/_custom_type_script = "uid://cdo07ga3o8o4n"

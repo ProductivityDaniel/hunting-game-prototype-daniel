@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://d183o6ufws6m7"]
+
+[ext_resource type="Script" uid="uid://cdo07ga3o8o4n" path="res://scripts/item.gd" id="1_7rigj"]
+[ext_resource type="PackedScene" uid="uid://b4og66002cri6" path="res://scenes/itemScenes/arrow.tscn" id="1_or3v6"]
+[ext_resource type="Texture2D" uid="uid://bsj7seu3jdoa4" path="res://assets/arrow.png" id="2_l1uoy"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_or3v6"]
+albedo_color = Color(0.858824, 0, 0.0862745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ig1r"]
+size = Vector3(0.1, 0.1, 1)
+
+[resource]
+script = ExtResource("1_7rigj")
+item_name = "Arrow"
+size = 0
+description = ""
+mesh = SubResource("BoxMesh_8ig1r")
+material = SubResource("ORMMaterial3D_or3v6")
+texture = ExtResource("2_l1uoy")
+behaviour = ExtResource("1_or3v6")
+sellPrice = 1
+metadata/_custom_type_script = "uid://cdo07ga3o8o4n"

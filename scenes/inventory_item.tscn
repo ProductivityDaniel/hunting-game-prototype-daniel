@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dihjlemjcrl01"]
+
+[ext_resource type="Script" uid="uid://b74yh2puguhuw" path="res://inventory_item.gd" id="1_u4rwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4rwp"]
+
+[node name="InventoryItem" type="RigidBody2D"]
+script = ExtResource("1_u4rwp")
+
+[node name="Texture" type="Sprite2D" parent="."]
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u4rwp")
+
+[node name="MouseDetectionBox" type="Area2D" parent="."]
+
+[node name="Hitbox" type="CollisionShape2D" parent="MouseDetectionBox"]
+shape = SubResource("RectangleShape2D_u4rwp")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

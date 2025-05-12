@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2e02avctyuqr"]
+
+[ext_resource type="Script" uid="uid://bg71077iw3hki" path="res://scripts/world_animal.gd" id="1_8yccw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ei4om"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j4d60"]
+
+[node name="WorldAnimal" type="CharacterBody3D"]
+script = ExtResource("1_8yccw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ei4om")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_j4d60")

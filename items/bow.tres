@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://1t3rcnecu1wr"]
+
+[ext_resource type="PackedScene" uid="uid://bioslgb7movl3" path="res://scenes/itemScenes/bow.tscn" id="1_65rus"]
+[ext_resource type="Script" uid="uid://cdo07ga3o8o4n" path="res://scripts/item.gd" id="1_dyhxc"]
+[ext_resource type="Texture2D" uid="uid://cx202x2m0pelv" path="res://assets/bow.png" id="3_65rus"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65rus"]
+albedo_color = Color(1, 0.231373, 0.152941, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mov6q"]
+size = Vector3(1, 0.1, 1)
+
+[resource]
+script = ExtResource("1_dyhxc")
+item_name = "Bow"
+size = 0
+description = ""
+mesh = SubResource("BoxMesh_mov6q")
+material = SubResource("StandardMaterial3D_65rus")
+texture = ExtResource("3_65rus")
+behaviour = ExtResource("1_65rus")
+sellPrice = 10
+metadata/_custom_type_script = "uid://cdo07ga3o8o4n"
